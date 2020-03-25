@@ -8,8 +8,11 @@ main () {
   realizar o cálculo
   retornar imc
   */
+  calculaIMC();
+} 
 
-  print ("Qual seu peso? ");
+calculaIMC() {
+   print ("Qual seu peso? ");
   var txtpeso = stdin.readLineSync();
   print ("Qual sua altura? ");
   var txtaltura = stdin.readLineSync();
@@ -32,4 +35,4 @@ main () {
   }
 
   print (calculo);
-} 
+}
