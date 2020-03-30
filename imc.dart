@@ -12,17 +12,27 @@ main () {
 } 
 
 calculaIMC() {
-   print ("Qual seu peso? ");
-  var txtpeso = stdin.readLineSync();
+  print ("Qual seu peso? ");
+  String txtpeso = stdin.readLineSync();
   print ("Qual sua altura? ");
-  var txtaltura = stdin.readLineSync();
+  String txtaltura = stdin.readLineSync();
 
-  var peso = int.parse(txtpeso);
-  var altura = double.parse(txtaltura);
+  int peso = int.parse(txtpeso);
+  double altura = double.parse(txtaltura);
 
-  var calculo = peso / (altura * altura);
+  double calculo = calcImc(peso, altura);
 
-  if (calculo <= 18.5) {
+  imprimeResultado(calculo);
+
+}
+
+double calcImc(int peso, double altura) {
+  return peso / (altura * altura);
+}
+
+imprimeResultado(calculo) {
+
+ if (calculo <= 18.5) {
     print ("Abaixo do Peso");
   } else if (calculo <= 24.9) {
     print ("Peso Normal");
@@ -35,4 +45,5 @@ calculaIMC() {
   }
 
   print (calculo);
+
 }
