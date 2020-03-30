@@ -11,6 +11,7 @@ main () {
   calculaIMC();
 } 
 
+//Programa Principal, chamado pelo main
 calculaIMC() {
   print ("Qual seu peso? ");
   String txtpeso = stdin.readLineSync();
@@ -26,10 +27,12 @@ calculaIMC() {
 
 }
 
+//Calculo efetivo do IMC
 double calcImc(int peso, double altura) {
   return peso / (altura * altura);
 }
 
+//Imprime e classifica o resultado
 imprimeResultado(calculo) {
 
  if (calculo <= 18.5) {
